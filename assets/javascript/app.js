@@ -1,4 +1,3 @@
-//Intialize Firebase
 var firebaseConfig = {
     apiKey: "AIzaSyB-fXRnIh0og9CT2gb51RmWi3dQe_b5mXY",
     authDomain: "traintime-51bc6.firebaseapp.com",
@@ -10,20 +9,16 @@ var firebaseConfig = {
   };
 
   firebase.initializeApp(firebaseConfig);
-//Create a variable to reference the database
 var database = firebase.database();
 
-//Initial Values
 var trainId = "";
 var place = "";
 var startTime = "";
 var freq = "";
 
-// Submit Button Click
 $("#addtrains").on("click", function(event){
 	event.preventDefault(); 
 	
-	// Code in the logic for storing and retrieving the most recent trains.
 	trainId = $("#train-input").val().trim();
 	place = $("#place-input").val().trim();
 	startTime = $("#firsttrain-input").val().trim();
